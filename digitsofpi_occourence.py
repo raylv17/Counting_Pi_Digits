@@ -8,6 +8,7 @@ pi_string = f.read()
 
 num_count = np.zeros(10)
 for i in pi_string:
+    # checks each occurrence
     if i == '1':
         num_count[1] += 1
     elif i == '2':
@@ -30,7 +31,9 @@ for i in pi_string:
         num_count[0] += 1
 
     # print(i, num_count)
+    
+    # checks if all counts are equal (prints
     if np.all(num_count == num_count[0]):
-        print(i)
+        print(i, "EQUAL")
 
-print(num_count)
+print(i, num_count)
